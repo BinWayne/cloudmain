@@ -5,7 +5,17 @@ server:
     include-message: always
 logging:
   level:
-    com.cloud.balancer.openfeign.TemplateService: debug
+    com.cloud.balancer.openfeign.TemplateService: debug #feign log 配置
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 2000
+        readTimeout: 5000
+      server-a:
+        connectTimeout: 3000
+        readTimeout: 3000
 spring:
   application:
     # 定义项目名称
