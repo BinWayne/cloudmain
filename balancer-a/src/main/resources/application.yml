@@ -16,6 +16,9 @@ feign:
       server-a:
         connectTimeout: 3000
         readTimeout: 3000
+  circuitbreaker:
+    enabled: true
+
 spring:
   application:
     # 定义项目名称

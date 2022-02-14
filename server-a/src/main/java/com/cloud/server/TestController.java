@@ -10,7 +10,7 @@ public class TestController {
     @RequestMapping("/call")
     public String call() throws InterruptedException {
         System.out.println("invoke");
-        Thread.sleep(6000);
-        return "hello";
+        throw new RuntimeException("服务端测试异常！");
+        //return "hello";
     }
 }
